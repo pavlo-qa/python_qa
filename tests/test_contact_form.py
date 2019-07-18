@@ -3,13 +3,6 @@ from engine.helpers.application import Application
 import pytest
 
 
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
-
-
 def test_happy_flow_case(app):
     app.navigator.navigate_to_contacts_page()
     # fill in and submit the contact form
