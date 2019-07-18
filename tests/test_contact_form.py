@@ -11,11 +11,13 @@ def app(request):
 
 
 def test_happy_flow_case(app):
-    app.navigate_to_contacts_page()
+    app.navigator.navigate_to_contacts_page()
     # fill in and submit the contact form
-    app.fill_in_first_name()
-    app.fill_in_surname()
-    app.select_topic()
-    app.fill_in_email()
-    app.fill_in_description()
-    app.submit_form()
+    app.form.fill_in_first_name()
+    app.form.fill_in_surname()
+    app.form.select_topic()
+    app.form.fill_in_email()
+    app.form.fill_in_description()
+    app.form.submit_form()
+    # go back to the main page
+    app.navigator.go_to(app.home)
