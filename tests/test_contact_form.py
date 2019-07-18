@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from engine.application import Application
+from engine.helpers.application import Application
 import pytest
 
 
